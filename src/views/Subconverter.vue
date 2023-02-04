@@ -6,6 +6,7 @@
           <div slot="header">
             订阅转化
             <svg-icon icon-class="github" style="margin-left: 20px" @click="goToProject" />
+            <svg-icon icon-class="telegram" style="margin-left: 20px" @click="goToTelegram" />
 
             <div style="display: inline-block; position:absolute; right: 20px">{{ backendVersion }}</div>
           </div>
@@ -433,6 +434,9 @@ export default {
   methods: {
     onCopy() {
       this.$message.success("Copied!");
+    },
+    goToTelegram(){
+      window.open("https://t.me/atticus_6");
     },
     goToProject() {
       window.open(project);
